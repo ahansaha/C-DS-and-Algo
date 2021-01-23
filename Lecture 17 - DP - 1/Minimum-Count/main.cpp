@@ -50,7 +50,7 @@ int minCount_DP (int n) {
 	int ans = INT_MAX;
 	for (int i = 2; i < n + 1; i++) {
 		for (int j = 1; pow(j, 2) <= i; j++) {
-			int temp = arr[i - (int) pow(j, 2)] + 1; //For some reason 'pow' function here keep throwing data type double expected error, hence I type casted it.
+			int temp = arr[i - (int) pow(j, 2)] + 1; //pow in general throws out double but in many case it works for integers also (depends on the compiler), but in some cases it doesn't, which is what happened here, hence I type casted it.
 			ans = min({ans, temp});
 		}
 		arr[i] = ans;
