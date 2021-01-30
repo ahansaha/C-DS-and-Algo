@@ -7,6 +7,8 @@ using namespace std;
 
 
 //BRUTE FORCE
+//T(N) = O(N ^ 2)
+//S(N) = O(N)
 int longestIncreasingSubsequence (int* arr, int n, int prev = INT_MIN) {
 	if (n <= 0)
 		return 0;
@@ -20,6 +22,8 @@ int longestIncreasingSubsequence (int* arr, int n, int prev = INT_MIN) {
 }
 
 //MEMOIZATION
+//T(N) = O(N * prev)
+//S(N) = O(N * prev)
 int longestIncreasingSubsequence_mem (int* arr, int ** output, int n, int prev = INT_MIN) {
 	if (n <= 0)
 		return 0;
@@ -69,6 +73,8 @@ int longestIncreasingSubsequence_mem (int * arr, int n) {
 }
 
 //DP
+//T(N) = O(N ^ 2)
+//S(N) = O(N)
 int longestIncreasingSubsequence_DP (int * arr, int n) {
 	int * output = new int[n];
 	output[0] = 1;
@@ -117,8 +123,6 @@ int binarySearch (vector<int> output, int si, int ei, int x) {
 		return binarySearch(output, mid + 1, ei, x);
 	}
 }
-
-//5 4 11 20 4 16 8
 
 int longestIncreasingSubsequence_DP_BinarySearch (int * arr, int n) {
 	vector<int> output;
