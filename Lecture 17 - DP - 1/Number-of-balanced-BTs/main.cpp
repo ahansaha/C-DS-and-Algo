@@ -5,7 +5,8 @@ using namespace std;
 
 //BRUTE FORCE
 long long int balancedBTs(int n) {
-    if (n <= 1) return 1; 
+    if (n == 1 || n == 0) return 1;
+    if (n < 1) return 0;
 	long long int mod = 1e9 + 7;
 	
 // 	int a = (balancedBTs (n - 1) * balancedBTs (n - 1)) % mod;
