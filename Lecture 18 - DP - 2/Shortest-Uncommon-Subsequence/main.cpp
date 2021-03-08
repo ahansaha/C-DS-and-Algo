@@ -88,6 +88,7 @@ int solve_mem(string s, string v) {
 }
 
 //Optimized Memoization
+//NOT CORRECT. NEXT 2D ARRAY TAKES TOO MUCH TIME TO FILL. FOLLOW CODING NINJAS VIDEO SOLUTION.
 int solve_mem2(string s, string v, int ** arr, int ** next) {
     if ((s.size() == 0 && v.size() != 0) || (s.size() == 0 && v.size() == 0)) {
         //Return worst possible answer.
@@ -132,6 +133,7 @@ int solve_mem2(string s, string v) {
     }
 
     //Build the next array. i, j represent the size of the s and v strings respectively.
+    //NEXT ARRAY NEEDS TO BE FIILED WITHIN S * V OR OVERALL TIME WILL INCREASE.
     for (int i = 0; i < s.size() + 1; i++) {
         for (int j = 0; j < v.size() + 1; j++) {
             int idx_1 = s.size() - i;
