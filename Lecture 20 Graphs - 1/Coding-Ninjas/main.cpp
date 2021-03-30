@@ -5,6 +5,8 @@
 #include <vector>
 using namespace std;
 
+//NOT PASSING ALL TEST CASES.
+
 bool DFS (vector<vector<char> > board, bool ** visited, string str, char endLetter, int rowIndex, int colIndex,  int maxRowIndex, int maxColIndex) {
     if (str[0] == endLetter) {
         return true;
